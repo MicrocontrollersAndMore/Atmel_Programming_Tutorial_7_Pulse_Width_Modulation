@@ -40,7 +40,7 @@ int main(void) {
 	
 	bit           7          6        5       4         3         2         1        0
 	name        FOC0A      FOC0B      -       -       WGM02      CS02      CS01     CS00
-	set to        0          0        0       0         0         1         0        1
+	set to        0          0        0       0         0         0         0        1
 	
 	FOC0A = 0     not used in PWM mode
 	FOC0B = 0
@@ -50,8 +50,8 @@ int main(void) {
 	
 	WGM02 = 0     Fast PWM mode, also see TCCR0A
 	
-	CS02 = 1
-	CS01 = 0      clock / 1024
+	CS02 = 0
+	CS01 = 0      no prescaling
 	CS00 = 1
 	*/
 	TCCR0B = 0b00000001;
