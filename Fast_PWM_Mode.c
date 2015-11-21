@@ -4,7 +4,7 @@
 // LED on PD6/OC0A (pin 12), PWMed
 
 #ifndef F_CPU					// if F_CPU was not defined in Project -> Properties
-#define F_CPU 1000000UL			// define it now as 1 GHz unsigned long
+#define F_CPU 1000000UL			// define it now as 1 MHz unsigned long
 #endif
 
 #include <avr/io.h>				// this is always included in AVR programs

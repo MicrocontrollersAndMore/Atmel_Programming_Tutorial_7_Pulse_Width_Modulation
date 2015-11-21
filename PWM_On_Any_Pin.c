@@ -4,7 +4,7 @@
 // LED on PC5 (pin 28)
 
 #ifndef F_CPU					// if F_CPU was not defined in Project -> Properties
-#define F_CPU 1000000UL			// define it now as 1 GHz unsigned long
+#define F_CPU 1000000UL			// define it now as 1 MHz unsigned long
 #endif
 
 #include <avr/io.h>				// this is always included in AVR programs
@@ -32,7 +32,7 @@ int main(void) {
 	bit 2 = 0
 	
 	WGM01 = 1     CTC (Clear Timer on Compare match) mode, see TCCR0B also
-	WGM00 = 0     timer will count up to value in OCR0A, then signal timer 0 compare interrupt
+	WGM00 = 0     TCNT0 will count up to value in OCR0A, then signal timer 0 compare interrupt
 	*/
 	TCCR0A = 0b00000010;
 	
